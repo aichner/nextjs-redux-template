@@ -19,9 +19,6 @@ import "@fortawesome/fontawesome-free/css/all.min.css";
 import "bootstrap-css-only/css/bootstrap.min.css";
 // Material Design for Bootstrap
 import "mdbreact/dist/css/mdb.css";
-//> Redux
-// Actions
-import { tokenAuth } from "../redux/actions/authActions";
 // Store
 import store from "../redux/store";
 //#endregion
