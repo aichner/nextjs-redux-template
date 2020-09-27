@@ -6,7 +6,10 @@ import React from "react";
 import Head from "next/head";
 //> Redux
 // Basic Redux provider
-import { Provider, connect } from "react-redux";
+import { connect } from "react-redux";
+//> MDB
+// "Material Design for Bootstrap" is a great UI design framework
+import { MDBBtn, MDBCard, MDBCardBody } from "mdbreact";
 
 //> Redux
 // Actions
@@ -34,13 +37,34 @@ class Home extends React.Component {
             className="img-fluid"
           />
           <h1 className={styles.title}>
-            Welcome to <a href="https://nextjs.org">Next.js!</a>
+            Welcome to{" "}
+            <a href="https://nextjs.org" target="_blank">
+              Next.js
+            </a>{" "}
+            Redux!
           </h1>
 
           <p className={styles.description}>
             Get started by editing{" "}
             <code className={styles.code}>pages/index.js</code>
           </p>
+
+          <MDBCard className="mt-3">
+            <MDBCardBody className="text-center">
+              <p className="h3-responsive">
+                Counter{" "}
+                <span className="font-weight-bold">{this.props.counter}</span>
+              </p>
+              <div>
+                <MDBBtn color="elegant" onClick={this.props.decrementCounter}>
+                  Decrease
+                </MDBBtn>
+                <MDBBtn color="elegant" onClick={this.props.incrementCounter}>
+                  Increase
+                </MDBBtn>
+              </div>
+            </MDBCardBody>
+          </MDBCard>
 
           <div className={styles.grid}>
             <a href="https://nextjs.org/docs" className={styles.card}>
