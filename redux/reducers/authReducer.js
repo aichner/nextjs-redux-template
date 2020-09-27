@@ -1,59 +1,30 @@
+//#region > Imports
+import { DECREMENT_COUNTER, INCREMENT_COUNTER } from "../actions/authActions";
+//#endregion
+
+//#region > Config
 // Have initial state for when state is not ready to be passed
 const initState = {
-  error: null,
+  value: 0,
 };
+//#endregion
 
+//#region > Functions
 const authReducer = (state = initState, action) => {
   switch (action.type) {
-    case "LOGIN_SUCCESS":
-      console.log("Login success");
-      return {
-        ...state,
-        error: null,
-      };
-    case "LOGIN_FAIL":
-      console.log("Error", action.payload);
-      return {
-        ...state,
-        error: action.payload?.error,
-      };
-    case "LOGIN_ANON_SUCCESS":
-      console.log("Login of anonymous user success");
-      return {
-        ...state,
-        error: null,
-      };
-    case "LOGIN_ANON_FAIL":
-      console.log("Could not login as anonymous user");
-      return {
-        ...state,
-        error: action.payload,
-      };
-    case "SIGNOUT_SUCCESS":
-      console.log("Signout success");
-      return {
-        ...state,
-        error: null,
-      };
-    case "SIGNUP_SUCCESS":
-      console.log("Signup success");
-      return {
-        ...state,
-        error: null,
-      };
-      return state;
-    case "SIGNUP_FAIL":
-      console.log("Signup error", action.payload);
-      return {
-        ...state,
-        error: action.payload,
-      };
+    case INCREMENT_COUNTER:
+      return { ...state, value: state.value + 1 };
+    case DECREMENT_COUNTER:
+      return { ...state, value: state.value - 1 };
     default:
-      return state;
+      return { ...state };
   }
 };
+//#endregion
 
+//#region > Exports
 export default authReducer;
+//#endregion
 
 /**
  * SPDX-License-Identifier: (EUPL-1.2)
