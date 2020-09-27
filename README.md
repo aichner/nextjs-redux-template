@@ -4,7 +4,7 @@
   </a>
 </p>
 
-<h3 align="center">Official ReactJS + NextJS Template</h3>
+<h3 align="center">Official ReactJS + MDB + NextJS Template</h3>
 
 <p align="center">
   This repository serves as an entry point for future React + NextJS projects of InspireMedia GmbH and beyond.
