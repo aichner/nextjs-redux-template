@@ -16,6 +16,11 @@ package-lock.json
 # production
 /build
 
+# firebase
+src/config/fbConfig.js
+.firebase
+.firebaserc
+
 # misc
 .DS_Store
 *.pem

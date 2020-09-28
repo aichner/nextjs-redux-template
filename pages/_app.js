@@ -15,10 +15,10 @@ import App from "next/app";
 import "../styles/globals.scss";
 // Icons
 import "@fortawesome/fontawesome-free/css/all.min.css";
-// Bootstrap
-import "bootstrap-css-only/css/bootstrap.min.css";
-// Material Design for Bootstrap
-import "mdbreact/dist/css/mdb.css";
+// Material for Bootstrap
+import "../styles/external/bootstrap.min.css";
+// External
+import "../styles/external.scss";
 // Store
 import store from "../redux/store";
 //#endregion
