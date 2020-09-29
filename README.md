@@ -4,18 +4,18 @@
   </a>
 </p>
 
-<h3 align="center">Official ReactJS + NextJS Template</h3>
+<h3 align="center">Official ReactJS + MDB + Redux + NextJS Template</h3>
 
 <p align="center">
-  This repository serves as an entry point for future React + NextJS projects of InspireMedia GmbH and beyond.
+  This repository serves as an entry point for future React + MDB + Redux + NextJS projects of InspireMedia GmbH and beyond.
   <br>
   <br>
-  <a href="https://github.com/aichner/nextjs-template/issues/new?template=bug_report.md">Report bug</a>
+  <a href="https://github.com/aichner/nextjs-redux-template/issues/new?template=bug_report.md">Report bug</a>
   ·
-  <a href="https://github.com/aichner/nextjs-template/issues/new?template=feature_request.md">Request feature</a>
+  <a href="https://github.com/aichner/nextjs-redux-template/issues/new?template=feature_request.md">Request feature</a>
   <br>
   <br>
-  <a href="https://www.codacy.com/app/aichner/nextjs-template">
+  <a href="https://www.codacy.com/app/aichner/nextjs-redux-template">
     <img src="https://api.codacy.com/project/badge/Grade/579c145ee6cf4d7e8ae7c1c78a13617a" />
   </a>
   <a href="https://liberapay.com/aichner/donate">
@@ -42,7 +42,7 @@
 
 Several quick start options are available:
 
-- Clone the repo: `https://github.com/aichner/nextjs-template.git`
+- Clone the repo: `https://github.com/aichner/nextjs-redux-template.git`
 
 ### This project may require the MDB React Pro license and its library
 
@@ -63,22 +63,23 @@ How to start this application?
 - Use `npm install` to install all dependencies
 - Start a local copy of the docs site with `npm start`
 - Or build a local copy of the library with `npm run build`
+- To deploy set up Firebase Hosting using Firebase CLI, then run `npm run deploy`
 
 You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
 
 ## [](#bug-and-feature-requests)Bugs and feature requests
 
 Have a bug or a feature request? Please first search for existing and closed issues. If your problem or idea is not
-addressed yet, [please open a new issue](https://github.com/aichner/nextjs-template/issues/new/choose).
+addressed yet, [please open a new issue](https://github.com/aichner/nextjs-redux-template/issues/new/choose).
 
 ## [](#contributing)Contributing
 
-![GitHub last commit](https://img.shields.io/github/last-commit/aichner/nextjs-template)
-![GitHub issues](https://img.shields.io/github/issues-raw/aichner/nextjs-template)
-![GitHub closed issues](https://img.shields.io/github/issues-closed-raw/aichner/nextjs-template?color=green)
+![GitHub last commit](https://img.shields.io/github/last-commit/aichner/nextjs-redux-template)
+![GitHub issues](https://img.shields.io/github/issues-raw/aichner/nextjs-redux-template)
+![GitHub closed issues](https://img.shields.io/github/issues-closed-raw/aichner/nextjs-redux-template?color=green)
 
 Please read through our
-[contributing guidelines](https://github.com/aichner/nextjs-template/blob/master/CONTRIBUTING.md). Included are
+[contributing guidelines](https://github.com/aichner/nextjs-redux-template/blob/master/CONTRIBUTING.md). Included are
 directions for opening issues, coding standards, and notes on development.
 
 All HTML and CSS should conform to the [Code Guide](https://github.com/mdo/code-guide), maintained by
@@ -93,7 +94,7 @@ Get updates on our development and chat/talk with the project maintainers and co
 
 ## [](#versioning)Versioning
 
-![GitHub package.json version](https://img.shields.io/github/package-json/v/aichner/nextjs-template)
+![GitHub package.json version](https://img.shields.io/github/package-json/v/aichner/nextjs-redux-template)
 
 For transparency into our release cycle and in striving to maintain backward compatibility, this repository is
 maintained under [the Semantic Versioning guidelines](https://semver.org/). Sometimes we screw up, but we adhere to
