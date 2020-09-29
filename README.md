@@ -63,6 +63,7 @@ How to start this application?
 - Use `npm install` to install all dependencies
 - Start a local copy of the docs site with `npm start`
 - Or build a local copy of the library with `npm run build`
+- To deploy set up Firebase Hosting using Firebase CLI, then run `npm run deploy`
 
 You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
 
