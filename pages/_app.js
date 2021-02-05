@@ -16,7 +16,7 @@ import "../styles/globals.scss";
 // Icons
 import "@fortawesome/fontawesome-free/css/all.min.css";
 // Material for Bootstrap
-import "../styles/external/bootstrap.min.css";
+import "bootstrap/dist/css/bootstrap.min.css";
 // External
 import "../styles/external.scss";
 // Store
