@@ -16,7 +16,7 @@ import "../styles/globals.scss";
 // Icons
 import "@fortawesome/fontawesome-free/css/all.min.css";
 // Material for Bootstrap
-import "../styles/external/bootstrap.min.css";
+import "bootstrap/dist/css/bootstrap.min.css";
 // External
 import "../styles/external.scss";
 // Store
@@ -65,5 +65,5 @@ export default MyApp;
 
 /**
  * SPDX-License-Identifier: (EUPL-1.2)
- * Copyright © 2020 InspireMedia GmbH
+ * Copyright © 2021 InspireMedia GmbH
  */
