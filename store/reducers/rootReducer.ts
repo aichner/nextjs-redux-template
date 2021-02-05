@@ -12,13 +12,15 @@ import { firestoreReducer } from "redux-firestore";
 import { firebaseReducer } from "react-redux-firebase";
 
 const rootReducer = combineReducers({
-  firestore: firestoreReducer,
-  firebase: firebaseReducer,
-  /* Authentication */
-  auth: authReducer,
+  firestoreReducer,
+  firebaseReducer,
+  authReducer,
 });
 
+//#region > Exports
+export type RootState = ReturnType<typeof rootReducer>;
 export default rootReducer;
+//#endregion
 
 /**
  * SPDX-License-Identifier: (EUPL-1.2)
