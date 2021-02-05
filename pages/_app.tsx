@@ -10,19 +10,16 @@ import { wrapper } from "../store/index";
 import "../styles/globals.scss";
 // External
 import "../styles/external.scss";
-
 //#endregion
 
 //#region > App
-
 const RootApp: React.FC<AppProps> = ({ Component, pageProps }) => {
   return <Component {...pageProps} />;
 };
-
-export default wrapper.withRedux(RootApp);
 //#endregion
 
 //#region > Exports
+export default wrapper.withRedux(RootApp);
 //#endregion
 
 /**
