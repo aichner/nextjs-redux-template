@@ -10,33 +10,48 @@ import { connect } from "react-redux";
 //> MDB
 // "Material Design for Bootstrap" is a great UI design framework
 import { MDBContainer, MDBCard, MDBCardBody } from "mdbreact";
+//> Lottie
+import Lottie from "react-lottie";
 
 //> Redux
 // Actions
 import { asyncIncrement, asyncDecrement } from "../store/actions/authActions";
+//> Lottie
+import animationData from "../assets/lottie/46472-lurking-cat.json";
 //#endregion
 
 //#region > Page
 const Home: React.FC<{}> = () => {
+  const defaultOptions = {
+    loop: true,
+    autoplay: true,
+    animationData: animationData,
+    rendererSettings: {
+      preserveAspectRatio: "xMidYMid slice",
+    },
+  };
+
   return (
     <MDBContainer fluid id="home">
       <Head
         children={
           <>
-            <title>Create Next App</title>
-            <link rel="icon" href="/favicon.ico" />
-            <meta
-              name="description"
-              content="Erwin Baumann, Bürgermeisterkandidat für Villach. Die Anliegen von Villach zuerst - ohne Wenn und Aber! Team Baumann und Freiheitlichen Villach für die Gemeinderatswahl 2021 "
+            <title>NextJS Redux Template</title>
+            <link
+              rel="icon"
+              href="https://avatars1.githubusercontent.com/u/50574311?s=200&v=4"
             />
           </>
         }
       />
       <main>
-        <img
-          src="https://avatars1.githubusercontent.com/u/50574311?s=200&v=4"
-          alt="Agency Logo"
-          className="img-fluid"
+        <Lottie
+          options={defaultOptions}
+          height={300}
+          width={300}
+          isStopped={false}
+          isPaused={false}
+          isClickToPauseDisabled={true}
         />
         <h1>
           Welcome to{" "}
