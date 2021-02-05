@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "private": true,
   "description": "ReactJS using NextJS for improved SEO and performance.",
-  "main": "index.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/aichner/nextjs-template.git"
@@ -14,11 +13,13 @@
   "bugs": {
     "url": "https://github.com/aichner/nextjs-template/issues"
   },
-  "homepage": "https://github.com/aichner/nextjs-template#readme",
+  "homepage": ".",
+  "engines": {
+    "node": "12"
+  },
   "scripts": {
     "dev": "next dev",
-    "build": "next build && next export",
-    "deploy": "npm run build && firebase deploy",
+    "build": "next build",
     "start": "npm run dev && next start"
   },
   "dependencies": {

@@ -130,4 +130,4 @@ to [contribute to our project](#contributing).
 ![GitHub repository license](https://img.shields.io/badge/license-EUPL--1.2-blue)
 
 SPDX-License-Identifier: (EUPL-1.2)
-Copyright © 2020 InspireMedia GmbH
+Copyright © 2021 InspireMedia GmbH

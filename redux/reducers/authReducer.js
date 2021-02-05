@@ -28,5 +28,5 @@ export default authReducer;
 
 /**
  * SPDX-License-Identifier: (EUPL-1.2)
- * Copyright © 2020 InspireMedia GmbH
+ * Copyright © 2021 InspireMedia GmbH
  */
