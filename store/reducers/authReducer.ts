@@ -12,7 +12,7 @@ const INIT_STATE: AuthState = {
 //#endregion
 
 //#region > Functions
-export default (state = INIT_STATE, action: AuthAction): AuthState => {
+const authReducer = (state = INIT_STATE, action: AuthAction): AuthState => {
   const { type, payload } = action;
 
   switch (type) {
@@ -30,6 +30,10 @@ export default (state = INIT_STATE, action: AuthAction): AuthState => {
       return { ...state };
   }
 };
+//#endregion
+
+//#region > Exports
+export default authReducer;
 //#endregion
 
 /**
