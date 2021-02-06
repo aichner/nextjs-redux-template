@@ -1,6 +1,5 @@
 import { ThunkAction, ThunkDispatch } from "redux-thunk";
 import { serializeError } from "serialize-error";
-import { types } from "util";
 import { RootState } from "../reducers/rootReducer";
 import { AuthAction, AuthActionTypes } from "../types";
 
