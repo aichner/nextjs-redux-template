@@ -17,13 +17,13 @@ import Lottie from "react-lottie";
 // Actions
 import { asyncIncrement, asyncDecrement } from "../store/actions/authActions";
 //> Lottie
-import animationData from "../assets/lottie/46472-lurking-cat.json";
+import animationData from "../assets/lottie/logo.json";
 //#endregion
 
 //#region > Page
 const Home: React.FC<{}> = () => {
   const defaultOptions = {
-    loop: true,
+    loop: false,
     autoplay: true,
     animationData: animationData,
     rendererSettings: {
@@ -45,14 +45,16 @@ const Home: React.FC<{}> = () => {
         }
       />
       <main>
-        <Lottie
-          options={defaultOptions}
-          height={300}
-          width={300}
-          isStopped={false}
-          isPaused={false}
-          isClickToPauseDisabled={true}
-        />
+        <div className="logo">
+          <Lottie
+            options={defaultOptions}
+            height={100}
+            width={200}
+            isStopped={false}
+            isPaused={false}
+            isClickToPauseDisabled={true}
+          />
+        </div>
         <h1>
           Welcome to{" "}
           <a href="https://nextjs.org" target="_blank">

@@ -7,9 +7,18 @@
   align-items: center;
   height: 100vh;
 
-  img {
-    height: 150px;
-    margin-bottom: 1.5rem;
+  .logo {
+    background: rgb(65, 30, 96);
+    background: radial-gradient(
+      circle,
+      rgba(65, 30, 96, 1) 19%,
+      rgba(21, 23, 71, 1) 100%
+    );
+    width: auto;
+    display: inline-block;
+    border-radius: 1rem;
+    padding: 1rem;
+    margin-bottom: 1rem;
   }
 }
 
