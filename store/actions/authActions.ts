@@ -4,7 +4,7 @@ import { RootState } from "../reducers/rootReducer";
 import { AuthAction, AuthActionTypes } from "../types";
 
 //#region > Creators
-export const asyncIncrement = async (): ThunkAction<
+export const asyncIncrement = (): ThunkAction<
   void,
   RootState,
   {},

@@ -13,7 +13,7 @@ import { firebaseReducer } from "react-redux-firebase";
 import { HYDRATE } from "next-redux-wrapper";
 
 const rootReducer = combineReducers({
-  firestore: firestoreReducer,
+  // firestore: firestoreReducer, // not working due to unknown error
   firebaseReducer,
   auth: authReducer,
 });
