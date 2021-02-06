@@ -53,6 +53,7 @@ const Home: React.FC<{}> = () => {
             isStopped={false}
             isPaused={false}
             isClickToPauseDisabled={true}
+            ariaRole="img"
           />
         </div>
         <h1>
