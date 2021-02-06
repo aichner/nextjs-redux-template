@@ -15,7 +15,6 @@ export const asyncIncrement = (): ThunkAction<
     getState,
     {}
   ) => {
-    console.log("test");
     dispatch({ type: AuthActionTypes.INCREMENT_COUNTER_REQUEST });
 
     try {
