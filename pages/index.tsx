@@ -9,7 +9,7 @@ import Head from "next/head";
 import { useSelector, useDispatch } from "react-redux";
 //> MDB
 // "Material Design for Bootstrap" is a great UI design framework
-import { MDBContainer, MDBCard, MDBCardBody } from "mdbreact";
+import { MDBContainer, MDBCard, MDBCardBody, MDBBtn } from "mdbreact";
 //> Lottie
 import Lottie from "lottie-react-web";
 
@@ -78,12 +78,18 @@ const Home: React.FC<{}> = () => {
               Redux Counter <span className="font-weight-bold">{value}</span>
             </p>
             <div>
-              <p color="elegant" onClick={() => dispatch(asyncDecrement())}>
+              <MDBBtn
+                color="elegant"
+                onClick={() => dispatch(asyncDecrement())}
+              >
                 Decrease
-              </p>
-              <p color="elegant" onClick={() => dispatch(asyncIncrement())}>
+              </MDBBtn>
+              <MDBBtn
+                color="elegant"
+                onClick={() => dispatch(asyncIncrement())}
+              >
                 Increase
-              </p>
+              </MDBBtn>
             </div>
           </MDBCardBody>
         </MDBCard>
