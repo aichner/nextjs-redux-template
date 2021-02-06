@@ -11,7 +11,7 @@ import { connect } from "react-redux";
 // "Material Design for Bootstrap" is a great UI design framework
 import { MDBContainer, MDBCard, MDBCardBody } from "mdbreact";
 //> Lottie
-import Lottie from "react-lottie";
+import Lottie from "lottie-react-web";
 
 //> Redux
 // Actions
@@ -50,9 +50,7 @@ const Home: React.FC<{}> = () => {
             options={defaultOptions}
             height={100}
             width={200}
-            isStopped={false}
-            isPaused={false}
-            isClickToPauseDisabled={true}
+            speed={2.5}
             ariaRole="img"
           />
         </div>
