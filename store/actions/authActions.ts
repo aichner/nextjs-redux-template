@@ -1,10 +1,11 @@
 import { ThunkAction, ThunkDispatch } from "redux-thunk";
 import { serializeError } from "serialize-error";
+import { types } from "util";
 import { RootState } from "../reducers/rootReducer";
-import { AuthAction } from "../types";
+import { AuthAction, AuthActionTypes } from "../types";
 
 //#region > Creators
-export const asyncIncrement = (): ThunkAction<
+export const asyncIncrement = async (): ThunkAction<
   void,
   RootState,
   {},
@@ -15,13 +16,14 @@ export const asyncIncrement = (): ThunkAction<
     getState,
     {}
   ) => {
-    dispatch({ type: "INCREMENT_COUNTER_REQUEST" });
+    console.log("test");
+    dispatch({ type: AuthActionTypes.INCREMENT_COUNTER_REQUEST });
 
     try {
-      dispatch({ type: "INCREMENT_COUNTER_SUCCESS" });
+      dispatch({ type: AuthActionTypes.INCREMENT_COUNTER_SUCCESS });
     } catch (ex) {
       dispatch({
-        type: "INCREMENT_COUNTER_FAILURE",
+        type: AuthActionTypes.INCREMENT_COUNTER_FAILURE,
         payload: {
           error: {
             message: "Fetching pages failed.",
@@ -44,12 +46,13 @@ export const asyncDecrement = (): ThunkAction<
     getState,
     {}
   ) => {
-    dispatch({ type: "INCREMENT_COUNTER_REQUEST" });
+    dispatch({ type: AuthActionTypes.DECREMENT_COUNTER_REQUEST });
 
     try {
+      dispatch({ type: AuthActionTypes.DECREMENT_COUNTER_SUCCESS });
     } catch (ex) {
       dispatch({
-        type: "INCREMENT_COUNTER_FAILURE",
+        type: AuthActionTypes.DECREMENT_COUNTER_FAILURE,
         payload: {
           error: {
             message: "Fetching pages failed.",

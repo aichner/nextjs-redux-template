@@ -1,6 +1,8 @@
 import { HYDRATE } from "next-redux-wrapper";
 
 //#region > General
+export type { RootState } from "./reducers/rootReducer";
+
 export interface ErrorState {
   error?: {
     message: string;
@@ -13,7 +15,7 @@ export interface ErrorState {
 //#region > Redux
 
 export interface AuthState extends ErrorState {
-  value: number;
+  value?: number;
 }
 
 export enum AuthActionTypes {

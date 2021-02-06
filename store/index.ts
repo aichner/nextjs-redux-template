@@ -2,15 +2,24 @@
 //> Redux
 // Allows to React components read data from a Redux store, and dispatch actions
 // to the store to update data.
-import { Context, createWrapper, MakeStore } from "next-redux-wrapper";
-import { AnyAction, applyMiddleware, createStore } from "redux";
-import rootReducer, { RootState } from "./reducers/rootReducer";
-import thunkMiddleware from "redux-thunk";
-// create a makeStore function
-// type AppThunkDispatch = ThunkDispatch<ApplicationState, void, AnyAction>;
+import thunk from "redux-thunk";
+import { applyMiddleware, createStore } from "redux";
+import { createWrapper, MakeStore } from "next-redux-wrapper";
+import { composeWithDevTools } from "redux-devtools-extension";
 
-const makeStore: MakeStore<RootState> = (context: Context) =>
-  createStore(rootReducer, applyMiddleware(thunkMiddleware));
+// Reducers
+import rootReducer, { RootState } from "./reducers/rootReducer";
+
+/**
+ * initStore
+ * Initialise and export redux store
+ */
+const initStore: MakeStore<RootState> = () => {
+  return createStore(
+    rootReducer,
+    composeWithDevTools(applyMiddleware(thunk.withExtraArgument({})))
+  );
+};
 
 // export an assembled wrapper
-export const wrapper = createWrapper<RootState>(makeStore, { debug: true });
+export const wrapper = createWrapper(initStore);

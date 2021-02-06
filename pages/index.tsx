@@ -6,7 +6,7 @@ import React from "react";
 import Head from "next/head";
 //> Redux
 // Basic Redux provider
-import { connect } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 //> MDB
 // "Material Design for Bootstrap" is a great UI design framework
 import { MDBContainer, MDBCard, MDBCardBody } from "mdbreact";
@@ -14,6 +14,9 @@ import { MDBContainer, MDBCard, MDBCardBody } from "mdbreact";
 import Lottie from "lottie-react-web";
 
 //> Redux
+import { wrapper } from "../store/index";
+// Types
+import { RootState } from "../store/types";
 // Actions
 import { asyncIncrement, asyncDecrement } from "../store/actions/authActions";
 //> Lottie
@@ -30,6 +33,9 @@ const Home: React.FC<{}> = () => {
       preserveAspectRatio: "xMidYMid slice",
     },
   };
+
+  const dispatch = useDispatch();
+  const { value } = useSelector<RootState, RootState>((state) => state).auth;
 
   return (
     <MDBContainer fluid id="home">
@@ -69,16 +75,15 @@ const Home: React.FC<{}> = () => {
         <MDBCard className="mt-3">
           <MDBCardBody className="text-center">
             <p className="h3-responsive">
-              Redux Counter{" "}
-              {/* <span className="font-weight-bold">{this.props.counter}</span> */}
+              Redux Counter <span className="font-weight-bold">{value}</span>
             </p>
             <div>
-              {/* <MDBBtn color="elegant" onClick={this.props.decrementCounter}>
+              <p color="elegant" onClick={() => dispatch(asyncDecrement())}>
                 Decrease
-              </MDBBtn>
-              <MDBBtn color="elegant" onClick={this.props.incrementCounter}>
+              </p>
+              <p color="elegant" onClick={() => dispatch(asyncIncrement())}>
                 Increase
-              </MDBBtn> */}
+              </p>
             </div>
           </MDBCardBody>
         </MDBCard>
@@ -87,6 +92,12 @@ const Home: React.FC<{}> = () => {
   );
 };
 //#endregion
+
+export const getServerSideProps = wrapper.getServerSideProps(
+  async ({ store }) => {
+    await store.dispatch<any>(asyncIncrement());
+  }
+);
 
 //#region > Exports
 export default Home;

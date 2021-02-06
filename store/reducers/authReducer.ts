@@ -16,16 +16,16 @@ const authReducer = (state = INIT_STATE, action: AuthAction): AuthState => {
   const { type, payload } = action;
 
   switch (type) {
-    case HYDRATE:
-      return { ...state, ...action.payload };
     case AuthActionTypes.INCREMENT_COUNTER_REQUEST:
     case AuthActionTypes.DECREMENT_COUNTER_REQUEST:
+      return { ...state };
     case AuthActionTypes.INCREMENT_COUNTER_SUCCESS:
       return { ...state, value: state.value + 1 };
     case AuthActionTypes.DECREMENT_COUNTER_SUCCESS:
       return { ...state, value: state.value - 1 };
     case AuthActionTypes.INCREMENT_COUNTER_FAILURE:
     case AuthActionTypes.DECREMENT_COUNTER_FAILURE:
+      return { ...state };
     default:
       return { ...state };
   }
