@@ -9,7 +9,9 @@ const EXTERNAL_DATA_URL = "https://www.inspiremedia.at";
 //#endregion
 
 //#region > Functions
-const createSitemap = (articles) => `<?xml version="1.0" encoding="UTF-8"?>
+const createSitemap = (
+  articles: any[]
+) => `<?xml version="1.0" encoding="UTF-8"?>
     <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
       <url>
         <loc>${`${EXTERNAL_DATA_URL}/`}</loc>
